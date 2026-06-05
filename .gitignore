@@ -1,0 +1,14 @@
+# Big files - exclude these from Github
+*.pcap
+*.csv
+*.pkl
+*.joblib
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+>DS_Store
+*.log
+
+# Don't upload secrets
+.github_token
+.env
