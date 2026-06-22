@@ -386,12 +386,13 @@ st.markdown("""
 
 
 # ============================================================
-# CONFIG
+# CONFIG — paths relative to this script's location
 # ============================================================
-MODEL_PATH = "hybrid_model.pkl"
-SCALER_PATH = "scaler.pkl"
-GRAPHS_DIR = "graphs"  # folder with confusion_matrix.png, roc_curve.png, etc.
-
+import os
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(SCRIPT_DIR, "hybrid_model.pkl")
+SCALER_PATH = os.path.join(SCRIPT_DIR, "scaler.pkl")
+GRAPHS_DIR = os.path.join(SCRIPT_DIR, "graphs")
 
 # ============================================================
 # LOAD MODEL
