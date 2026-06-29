@@ -1,7 +1,8 @@
 # LibreOffice lock files
 .~lock.*
 # Big files - exclude these from Github
-*.pcap
+# *.pcap
+simulation/pcaps/*.pcap
 *.csv
 __pycache__/
 *.pyc
