@@ -107,6 +107,13 @@ iot-ddos-detection-fyp/
 │       ├── feature_importance.png
 │       └── topology_drawing.png
 │
+├── sample_pcaps/                       # Ready-to-use test files
+│   ├── benign_small.pcap               # Normal IoT traffic sample
+│   ├── syn_flood_small.pcap            # SYN flood attack sample
+│   ├── udp_flood_small.pcap            # UDP flood attack sample
+│   ├── icmp_flood_small.pcap           # ICMP flood attack sample
+│   └── http_flood_small.pcap           # HTTP flood attack sample
+│
 ├── simulation/                         # Mininet IoT network simulation
 │   └── scripts/                        # Traffic generation scripts
 │       ├── topology.py                 # Network topology builder
@@ -124,12 +131,14 @@ iot-ddos-detection-fyp/
 
 ## 🚀 Quick Start
 
-### Option 1 — Try the live demo
+### Option 1 — Try the live demo (easiest)
 
 Visit **https://iot-ddos-detection.streamlit.app** and:
+
 1. Click the **🔍 Live Detection** tab
-2. Upload a small PCAP file (under 20 MB)
-3. View real-time DDoS analysis with attack-type breakdown
+2. Download a sample PCAP file from the [`sample_pcaps/`](sample_pcaps/) folder of this repo
+3. Upload the PCAP to the dashboard
+4. View real-time DDoS analysis with attack-type breakdown
 
 ### Option 2 — Run locally
 
@@ -137,7 +146,6 @@ Visit **https://iot-ddos-detection.streamlit.app** and:
 - Python 3.10+
 - pip
 - Git
-- (Optional) Mininet for simulation reproduction
 
 #### Installation
 
@@ -154,6 +162,30 @@ streamlit run dashboard.py
 ```
 
 The dashboard opens at `http://localhost:8501`.
+
+#### Test it immediately
+
+After the dashboard opens:
+1. Click the **🔍 Live Detection** tab
+2. Click the **Upload** button
+3. Select any file from the `sample_pcaps/` folder of this repo
+4. View the analysis results
+
+---
+
+## 🧪 Sample Test Files
+
+The `sample_pcaps/` folder contains five pre-prepared PCAP files for immediate testing — one benign sample and one for each DDoS attack type:
+
+| File | Type | Size | Expected Result |
+|------|------|------|-----------------|
+| `benign_small.pcap` | Normal IoT traffic | ~25 MB | ✅ Safe (Green banner) |
+| `syn_flood_small.pcap` | SYN flood DDoS attack | ~25 MB | 🚨 Threat detected (Red banner) |
+| `udp_flood_small.pcap` | UDP flood DDoS attack | ~25 MB | 🚨 Threat detected (Red banner) |
+| `icmp_flood_small.pcap` | ICMP flood DDoS attack | ~25 MB | 🚨 Threat detected (Red banner) |
+| `http_flood_small.pcap` | HTTP flood DDoS attack | ~25 MB | 🚨 Threat detected (Red banner) |
+
+These samples are smaller representative subsets of the full simulation captures (50,000 packets each), suitable for quick testing while maintaining the statistical characteristics of the original full captures.
 
 ---
 
@@ -207,12 +239,12 @@ The Streamlit dashboard has 5 navigable pages:
 
 ---
 
-## 🔄 Reproducing the Simulation (Advanced)
+## 🔄 Reproducing the Full Simulation (Advanced)
 
-To regenerate the dataset from scratch using Mininet, you'll need a Debian/Ubuntu Linux machine with Mininet installed.
+To regenerate the dataset from scratch using Mininet, you'll need a Debian/Ubuntu Linux machine.
 
 ```bash
-# 1. Install Mininet
+# 1. Install required tools
 sudo apt update
 sudo apt install mininet hping3 tshark python3-scapy
 
@@ -243,13 +275,13 @@ The full dataset contains **341,699 flow instances** with **16 features** (15 in
 - **Benign traffic:** 194,631 flows (57.0%)
 - **DDoS attack traffic:** 147,068 flows (43.0%) covering SYN, UDP, ICMP, and HTTP floods
 
-**Note:** Raw PCAP files (~4.1 GB) are not included in the repository due to size. Contact the authors for access, or regenerate using the simulation scripts above.
+**Note:** Full raw PCAP files (~4.1 GB total) are not included in the repository due to size. For the full captures or the complete `iot_dataset.csv`, please contact the authors or regenerate using the simulation scripts above. Smaller test samples are provided in the `sample_pcaps/` folder.
 
 ---
 
 ## 🧪 Model Training
 
-Model training was performed in **Google Colab** for GPU acceleration. The training notebook performs:
+Model training was performed in **Google Colab** for GPU acceleration. The training pipeline performs:
 
 1. Data loading from `iot_dataset.csv`
 2. Train/validation/test split (70/15/15, stratified)
