@@ -1,3 +1,5 @@
+# LibreOffice lock files
+.~lock.*
 # Big files - exclude these from Github
 *.pcap
 *.csv
