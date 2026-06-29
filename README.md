@@ -16,12 +16,14 @@ A hybrid machine learning framework that detects Distributed Denial-of-Service (
 
 ## 👥 Team
 
-| Name | Role | GitHub |
-|------|------|--------|
-| **Zamzam Hassan Ali** | ML Model & Dashboard Development | [@Zamzam005](https://github.com/Zamzam005) |
-| **Hafso Hussein Ahmed** | Simulation & Dataset Generation | — |
+| Name | Primary Contribution | GitHub |
+|------|---------------------|--------|
+| **Zamzam Hassan Ali** | IoT Network Simulation, Dataset Generation & Dashboard | [@Zamzam005](https://github.com/Zamzam005) |
+| **Hafso Hussein Ahmed** | Machine Learning Model Training & Dashboard | — |
 
-**Supervisor:** Luul Farah Abdullahi
+*The Streamlit dashboard was developed collaboratively by both team members.*
+
+**Supervisor:** Lul Farah Abdullahi
 **Institution:** SIMAD University, Mogadishu, Somalia
 
 ---
@@ -284,13 +286,13 @@ Model training was performed in **Google Colab** for GPU acceleration. The train
 If you use this work, please cite:
 
 ```bibtex
-@thesis{ali_ahmed_2026_ddos,
-  author = {Ali, Zamzam Hassan and Ahmed, Hafso Hussein},
-  title = {Hybrid Machine Learning Approach for Detecting DDoS Attacks
-           in Simulated IoT Networks},
-  school = {SIMAD University},
-  year = {2026},
-  type = {BSc Thesis},
+@thesis{zamzam_hafso_2026_ddos,
+  author  = {Zamzam Hassan Ali and Hafso Hussein Ahmed},
+  title   = {Hybrid Machine Learning Approach for Detecting DDoS Attacks
+             in Simulated IoT Networks},
+  school  = {SIMAD University},
+  year    = {2026},
+  type    = {BSc Thesis},
   address = {Mogadishu, Somalia}
 }
 ```
@@ -317,7 +319,7 @@ For reuse in commercial or other academic projects, please contact the authors.
 
 We extend our deepest gratitude to:
 
-- **Luul Farah Abdullahi** — Our supervisor, for her patient guidance and invaluable feedback throughout this research
+- **Lul Farah Abdullahi** — Our supervisor, for her patient guidance and invaluable feedback throughout this research
 - **SIMAD University, Faculty of Computing** — For providing the academic environment and resources
 - **The open-source community** — Mininet, scikit-learn, Streamlit, scapy, and all the tools that made this project possible
 - **Our families** — For their unwavering support and prayers
