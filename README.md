@@ -19,7 +19,7 @@ A hybrid machine learning framework that detects Distributed Denial-of-Service (
 | Name | Primary Contribution | GitHub |
 |------|---------------------|--------|
 | **Zamzam Hassan Ali** | IoT Network Simulation, Dataset Generation & Dashboard | [@Zamzam005](https://github.com/Zamzam005) |
-| **Hafso Hussein Ahmed** | Machine Learning Model Training & Dashboard | — |
+| **Hafso Hussein Ahmed** | Machine Learning Model Training & Dashboard | [@hafsahussein-99](https://github.com/hafsahussein-99) |
 
 *The Streamlit dashboard was developed collaboratively by both team members.*
 
