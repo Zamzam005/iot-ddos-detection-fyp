@@ -10,8 +10,6 @@
 
 A hybrid machine learning framework that detects Distributed Denial-of-Service (DDoS) attacks in IoT networks by combining Random Forest, K-Nearest Neighbors, and Gradient Boosting through a stacking ensemble with a Logistic Regression meta-learner.
 
-🌐 **Live Demo:** [iot-ddos-detection.streamlit.app](https://iot-ddos-detection.streamlit.app)
-
 ---
 
 ## 👥 Team
@@ -83,11 +81,10 @@ This project addresses these challenges by:
 - **Google Colab** — Model training environment
 - **joblib** — Model serialization
 
-### Dashboard & Deployment
+### Dashboard
 - **Streamlit 1.31** — Web interface framework
 - **pandas, numpy** — Data processing
 - **matplotlib, seaborn** — Visualizations
-- **Streamlit Cloud** — Live deployment
 
 ---
 
@@ -123,31 +120,20 @@ iot-ddos-detection-fyp/
 │       └── extract_features.py         # nfstream feature extractor
 │
 ├── .gitignore                          # Git ignore rules
-├── runtime.txt                         # Python version for deployment
+├── runtime.txt                         # Python version specification
 └── README.md                           # You are here
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start — Run the Dashboard Locally
 
-### Option 1 — Try the live demo (easiest)
-
-Visit **https://iot-ddos-detection.streamlit.app** and:
-
-1. Click the **🔍 Live Detection** tab
-2. Download a sample PCAP file from the [`sample_pcaps/`](sample_pcaps/) folder of this repo
-3. Upload the PCAP to the dashboard
-4. View real-time DDoS analysis with attack-type breakdown
-
-### Option 2 — Run locally
-
-#### Prerequisites
+### Prerequisites
 - Python 3.10+
 - pip
 - Git
 
-#### Installation
+### Installation
 
 ```bash
 # Clone the repository
@@ -163,13 +149,13 @@ streamlit run dashboard.py
 
 The dashboard opens at `http://localhost:8501`.
 
-#### Test it immediately
+### Test it immediately
 
-After the dashboard opens:
+After the dashboard opens in your browser:
 1. Click the **🔍 Live Detection** tab
 2. Click the **Upload** button
 3. Select any file from the `sample_pcaps/` folder of this repo
-4. View the analysis results
+4. View the real-time DDoS analysis results
 
 ---
 
@@ -342,8 +328,8 @@ For reuse in commercial or other academic projects, please contact the authors.
 ## 📬 Contact
 
 - **Zamzam Hassan Ali** — GitHub: [@Zamzam005](https://github.com/Zamzam005)
+- **Hafso Hussein Ahmed** — GitHub: [@hafsahussein-99](https://github.com/hafsahussein-99)
 - **Project Repository:** https://github.com/Zamzam005/iot-ddos-detection-fyp
-- **Live Demo:** https://iot-ddos-detection.streamlit.app
 
 ---
 
