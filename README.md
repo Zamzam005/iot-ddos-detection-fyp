@@ -308,7 +308,7 @@ If you use this work, please cite:
   author  = {Zamzam Hassan Ali and Hafso Hussein Ahmed},
   title   = {Hybrid Machine Learning Approach for Detecting DDoS Attacks
              in Simulated IoT Networks},
-  school  = {SIMAD University},
+  university  = {SIMAD University},
   year    = {2026},
   type    = {BSc Thesis},
   address = {Mogadishu, Somalia}
