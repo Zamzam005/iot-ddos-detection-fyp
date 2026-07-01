@@ -346,4 +346,4 @@ We extend our deepest gratitude to:
 
 ---
 
-**Built with ❤️ at SIMAD University · 2026**
+**Built with at SIMAD University · 2026**
